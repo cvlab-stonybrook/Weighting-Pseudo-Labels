@@ -1,7 +1,7 @@
 ## Training Detector
 We have the code to first convert the semantic segmentation dataset to bounding boxes to train the detector
 
-### Generating the bounding boxes
+#### Generating the bounding boxes
 ```bash
 python 1_make_all_class_bboxes.py
 ```
