@@ -1,0 +1,26 @@
+# arguments for dataset
+dataset: pascal
+nclass: 21
+crop_size: 321
+data_root: /nfs/bigtensor.cs.stonybrook.edu/add_disk0/ironman/data/PASCAL_Unimatch
+bbox_path: /nfs/bigtensor.cs.stonybrook.edu/add_disk1/ironman/fastrcnn/pascal_coco/results_bestmodel3971/train_split_92_images_bounding_box_95
+bbox_lbl_path: /nfs/bigtensor.cs.stonybrook.edu/add_disk1/ironman/fastrcnn/pascal_coco/results_bestmodel3971/train_split_92_new_result_images_labels_95
+bbox_score_path: /nfs/bigtensor.cs.stonybrook.edu/add_disk1/ironman/fastrcnn/pascal_coco/results_bestmodel3971/train_split_92_new_result_images_scores_95
+K: 5
+#data_root: /home/phowlader/data/PASCAL_Unimatch
+# arguments for training
+epochs: 80
+batch_size: 4 # 2 per GPU x 4 GPUs
+lr: 0.001
+lr_multi: 10.0
+criterion:
+  name: CELoss
+  kwargs:
+    ignore_index: 255
+conf_thresh: 0.95
+
+# arguments for model
+model: deeplabv3plus
+backbone: resnet101
+replace_stride_with_dilation: [False, False, True]
+dilations: [6, 12, 18]
