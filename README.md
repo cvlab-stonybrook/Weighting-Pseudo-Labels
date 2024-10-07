@@ -22,5 +22,5 @@ Please modify your dataset path in configuration files.
     └── gtFine
     
 ```
-Generating bounding boxes for training segmentation network. check fasterrcn for instructions
+Generating bounding boxes for training segmentation network. check fasterrcnn for instructions
 
