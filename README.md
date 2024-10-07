@@ -1,6 +1,5 @@
 # Weighting Pseudo-Labels via High-Activation Feature Index Similarity and Object Detection for Semi-Supervised Segmentation [ECCV 2024]
 
-Code to  be releaaed by October 7
 
 ## Contact
 
@@ -24,3 +23,23 @@ Please modify your dataset path in configuration files.
 ```
 Generating bounding boxes for training segmentation network. check fasterrcnn for instructions
 
+## Usage
+
+### UniMatch + Ours
+
+```bash
+# use torch.distributed.launch
+sh scripts/train.sh
+```
+## Citation
+
+If you find this project useful, please consider citing:
+
+```bibtex
+@article{howlader2024weighting,
+  title={Weighting Pseudo-Labels via High-Activation Feature Index Similarity and Object Detection for Semi-Supervised Segmentation},
+  author={Howlader, Prantik and Le, Hieu and Samaras, Dimitris},
+  journal={arXiv preprint arXiv:2407.12630},
+  year={2024}
+}
+```
